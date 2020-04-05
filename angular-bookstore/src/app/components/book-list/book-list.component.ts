@@ -4,7 +4,6 @@ import { BookService } from 'src/app/services/book.service';
 
 @Component({
   selector: 'app-book-list',
-  //templateUrl: './book-list.component.html',
   templateUrl: './book-grid.component.html',
   styleUrls: ['./book-list.component.css'],
 })
@@ -20,7 +19,8 @@ export class BookListComponent implements OnInit {
 
   listBooks() {
     this._bookService.getBooks().subscribe((data) => {
-      data.map(price => price.unitPrice /= this.rupeesToDollar);
+      data.map(item => {item.unitPrice /= this.rupeesToDollar;
+      console.log(item.imageUrl)});
       this.books = data;
     });
   }
