@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-grid.component.html',
-  styleUrls: ['./book-list.component.css'],
+  styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent implements OnInit {
   
